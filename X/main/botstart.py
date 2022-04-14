@@ -11,3 +11,6 @@ if SESSION is not None:
 else:
     session_name = "startup"
     BaseClient = TelegramClient(session_name, APP_ID, API_HASH)
+
+bot = BaseClient
+Client = BaseClient
