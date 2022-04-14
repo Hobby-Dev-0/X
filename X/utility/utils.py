@@ -16,7 +16,7 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from .. import CMD_LIST, LOAD_PLUG, SUDO_LIST, BaseClient, CMD_HELP, LOGS
+from .. import *
 from .progress import CancelProcess
 
 
