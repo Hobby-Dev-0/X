@@ -42,7 +42,7 @@ def load_module(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.BaseClient = BaseClient
-                mod.bot = bot
+        mod.bot = bot
         mod.borg = bot
         mod.Andencento = bot
         mod.telebot = bot
@@ -95,7 +95,7 @@ def load_module(shortname):
         mod.borg = BaseClient
         mod.edit_or_reply = edit_or_reply
         # support for paperplaneextended
-        sys.modules["userbot.mainfiles.events"] = 
+        sys.modules["userbot.mainfiles.events"] = X.utility.utils
         mod.edit_or_reply = edit_or_reply
         # support for paperplaneextended
         sys.modules["X.events"] = X.utility.utils
@@ -247,6 +247,7 @@ def XS_cmd(pattern=None, command=None, **args):
     # check if the plugin should listen for outgoing 'messages'
     return events.NewMessage(**args)
 
+register = XS_cmd
 
 # https://t.me/c/1220993104/623253
 # https://docs.telethon.dev/en/latest/misc/changelog.html#breaking-changes
