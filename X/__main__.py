@@ -33,7 +33,7 @@ else:
     else:
         BaseClient.start()
         
-BaseClient.loop.until_disconnected(modules_loading())
+BaseClient.loop.run_until_disconnected(modules_loading())
         
 if len(argv) not in (1, 3, 4):
     BaseClient.disconnect()
