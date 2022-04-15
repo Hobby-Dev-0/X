@@ -68,8 +68,6 @@ def load_module(shortname):
         sys.modules["BaseClient.events"] = X.utility.utils
         sys.modules["userbot.events"] = X.utility.utils
         sys.modules["ULTRA.utils"] = X.utility.utils
-        sys.modules["userbot.Config"] = X.other.config
-        sys.modules["userbot.uniborConfig"] = X.other.config
         sys.modules["ub"] = X
         sys.modules["var"] = X.other.variables
         sys.modules["jarvis"] = X
@@ -82,11 +80,7 @@ def load_module(shortname):
         sys.modules["telebot.utils"] = X.utility.utils
         sys.modules["userbot.utils"] = X.utility.utils
         sys.modules["userbot.events"] = X.utility.utils
-        sys.modules["jarvis.jconfig"] = X.other.config
-        sys.modules["userbot.config"] = X.other.config
         sys.modules["fridaybot.utils"] = X.utility.utils
-        sys.modules["fridaybot.Config"] = X.other.config
-        sys.modules["userbot.uniborgConfig"] = X.other.config
         mod.edit_or_reply = edit_or_reply
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
