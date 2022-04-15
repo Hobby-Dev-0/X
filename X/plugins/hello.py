@@ -1,6 +1,6 @@
 from . import *
 
-@BaseClient.on(X_cmd(pattern=("Hi"))
+@BaseClient.on(X_cmd(pattern=("Hi")))
 async def _(aman):
     if aman.fwd_from:
         return
