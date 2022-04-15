@@ -58,7 +58,6 @@ def load_module(shortname):
         mod.telebot = BaseClient
         mod.jarvis = BaseClient
         mod.friday = BaseClient
-        mod.Var = Var
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         mod.LOGS = LOGS
