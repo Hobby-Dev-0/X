@@ -537,7 +537,7 @@ def command(**args):
                 CMD_LIST.update({file_test: [cmd]})
         except BaseException:
             pass
-    if allow_sudo//:
+    if allow_sudo:
         args["from_users"] = list(SUDO_CLIENT)
         # Mutually exclusive with outgoing (can only set one of either).
         args["incoming"] = True
