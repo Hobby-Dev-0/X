@@ -69,7 +69,6 @@ def load_module(shortname):
         sys.modules["userbot.events"] = X.utility.utils
         sys.modules["ULTRA.utils"] = X.utility.utils
         sys.modules["ub"] = X
-        sys.modules["var"] = X.other.variables
         sys.modules["jarvis"] = X
         sys.modules["support"] = X
         sys.modules["userbot"] = X
