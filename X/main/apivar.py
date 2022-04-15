@@ -15,3 +15,6 @@ APP_ID = union("APP_ID")
 API_HASH = union("API_HASH")
 ENV = union("ENV", False)
 ALIVE_NAME = union("ALIVE_NAME") or "Please set Your Name on Heroku or Railway in vars section"
+BLOCKLIST = union("BLOCKLIST", "")
+HANDLER = union("HANDLER")
+SUDO_HANDLER = union("SUDO_HANDLER")
