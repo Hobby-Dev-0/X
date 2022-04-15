@@ -8,7 +8,7 @@ import heroku3
 from dotenv import load_dotenv
 from requests import get
 StartTime = time.time()
-
+BOTLOG_CHATID = -100
 
 CONSOLE_LOGGER_VERBOSE = sb(union("CONSOLE_LOGGER_VERBOSE", "False"))
 
