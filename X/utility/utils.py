@@ -104,6 +104,10 @@ def load_module(shortname):
         sys.modules["X.plugins." + shortname] = mod
         LOGS.info("Successfully imported " + shortname)
 
+
+
+load_utils = load_module
+
 def remove_plugin(shortname):
     try:
         try:
