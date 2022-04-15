@@ -119,7 +119,7 @@ def remove_plugin(shortname):
 
 
 def X_cmd(pattern=None, command=None, **args):
-    args["func"] = lambda e: e.via_BaseClient_id is None
+    args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
     file_test = Path(previous_stack_frame.filename)
