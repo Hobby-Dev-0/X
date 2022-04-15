@@ -18,3 +18,5 @@ ALIVE_NAME = union("ALIVE_NAME") or "Please set Your Name on Heroku or Railway i
 BLOCKLIST = union("BLOCKLIST", "")
 HANDLER = union("HANDLER")
 SUDO_HANDLER = union("SUDO_HANDLER")
+BOT_USERNAME = union("BOT_USERNAME")
+BOT_TOKEN = union("BOT_TOKEN)
