@@ -62,7 +62,7 @@ def load_module(shortname):
         mod.logger = logging.getLogger(shortname)
         mod.LOGS = LOGS
         mod.tgbot = bot.tgbot
-        mod.sudo_cmd = sudo_cmd
+        mod.sudo_cmd = XS_cmd
         sys.modules["userbot"] = X
         sys.modules["userbot.utils"] = X.utility.utils
         sys.modules["BaseClient.events"] = X.utility.utils
