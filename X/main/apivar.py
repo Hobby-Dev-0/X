@@ -11,7 +11,7 @@ async def checkup():
   
 
 SESSION = union("SESSION")
-APP_ID = union("APP_ID")
+APP_ID = API_ID = union("API_ID")
 API_HASH = union("API_HASH")
 ENV = union("ENV", False)
 ALIVE_NAME = union("ALIVE_NAME") or "Please set Your Name on Heroku or Railway in vars section"
