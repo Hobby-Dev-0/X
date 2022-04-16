@@ -46,7 +46,7 @@ async def carbon_api(e):
     prefs = {"download.default_directory": "./"}
     chrome_options.add_experimental_option("prefs", prefs)
     driver = webdriver.Chrome(
-        executable_path=Config.CHROME_DRIVER, options=chrome_options
+        executable_path=CHROME_DRIVER, options=chrome_options
     )
     driver.get(url)
     await godboy.edit("`Be Patient...\n50%`")
@@ -114,7 +114,7 @@ async def carbon_api(e):
     prefs = {"download.default_directory": "./"}
     chrome_options.add_experimental_option("prefs", prefs)
     driver = webdriver.Chrome(
-        executable_path=Config.CHROME_DRIVER, options=chrome_options
+        executable_path=CHROME_DRIVER, options=chrome_options
     )
     driver.get(url)
     await godboy.edit("`Be Patient...\n50%`")
