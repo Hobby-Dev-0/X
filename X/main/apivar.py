@@ -8,7 +8,10 @@ async def checkup():
     sys.exit()
   else:
     pass
-  
+
+def deEmojify(inputString: str) -> str:
+    """Remove emojis and other non-safe characters from string"""
+    return re.sub(EMOJI_PATTERN, "", inputString)
 
 SESSION = union("SESSION")
 APP_ID = API_ID = union("API_ID")
