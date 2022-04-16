@@ -81,6 +81,7 @@ def load_module(shortname):
         sys.modules["userbot.events"] = X.utility.utils
         sys.modules["fridaybot.utils"] = X.utility.utils
         mod.edit_or_reply = edit_or_reply
+        mod.eor = edit_or_reply
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
         sys.modules["uniborg.util"] = X.utility.utils
@@ -259,7 +260,7 @@ async def edit_or_reply(event, text, parse_mode=None, link_preview=None):
         return await event.reply(text, parse_mode=parse_mode, link_preview=link_preview)
     return await event.edit(text, parse_mode=parse_mode, link_preview=link_preview)
 
-
+eor = edit_or_reply
 # from paperplaneextended
 on = BaseClient.on
 
