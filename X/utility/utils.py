@@ -186,7 +186,7 @@ def X_cmd(pattern=None, command=None, **args):
 
 
 def XS_cmd(pattern=None, command=None, **args):
-    args["func"] = lambda e: e.via_BaseClient_id is None
+    args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
     file_test = Path(previous_stack_frame.filename)
@@ -434,7 +434,7 @@ async def is_admin(client, chat_id, user_id):
 
 
 def BaseCB(**args):
-    args["func"] = lambda e: e.via_BaseClient_id is None
+    args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
     file_test = Path(previous_stack_frame.filename)
@@ -495,7 +495,7 @@ def BaseCB(**args):
 
 
 def command(**args):
-    args["func"] = lambda e: e.via_BaseClient_id is None
+    args["func"] = lambda e: e.via_bot_id is None
 
     stack = inspect.stack()
     previous_stack_frame = stack[1]
