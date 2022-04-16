@@ -7,6 +7,7 @@ async def _(aman):
     try:
         await aman.edit_message(aman.chat_id, "Hello! My Friend")
     except:
+        await aman.delete()
         await BaseClient.send_message(aman.chat_id, "Hello! My Friend")
    # except:
     #    await aman.delete()
