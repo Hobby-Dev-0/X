@@ -1,4 +1,11 @@
+import asyncio
+import math
 import os
+import sys
+import re
+import heroku3
+import requests
+import urllib3
 union = os.environ.get
 version = union("UB_VER")
 ver = "0.1"
