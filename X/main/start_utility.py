@@ -8,6 +8,26 @@ import heroku3
 from dotenv import load_dotenv
 from requests import get
 StartTime = time.time()
+import asyncio
+import math
+import os
+import sys
+import requests
+import urllib3
+
+
+async def bash(cmd):
+    process = await asyncio.create_subprocess_shell(
+        cmd,
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE,
+    )
+    stdout, stderr = await process.communicate()
+    err = stderr.decode().strip()
+    out = stdout.decode().strip()
+    return out, err
+
+
 BOTLOG_CHATID = -100
 
 CONSOLE_LOGGER_VERBOSE = sb(union("CONSOLE_LOGGER_VERBOSE", "False"))
