@@ -69,7 +69,7 @@ if BOT_USERNAME is not None and tgbot is not None:
                 help_string += "\n"
         except:
             pass
-        if help_string is "":
+        if help_string == "":
             reply_pop_up_alert = "{} is useless".format(plugin_name)
         else:
             reply_pop_up_alert = help_string
