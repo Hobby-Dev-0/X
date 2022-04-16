@@ -11,8 +11,8 @@ from . import *
 
 
 # Google Drive ()
-CHROME_BIN = "/app/.apt/usr/bin/google-chrome"
-CHROME_DRIVER = "/app/.chromedriver/bin/chromedriver"
+CHROME_BIN = union("CHROME_BIN", "/app/.apt/usr/bin/google-chrome")
+CHROME_DRIVER = union("CHROME_DRIVER", "/app/.chromedriver/bin/chromedriver")
     
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "X USER"
 
