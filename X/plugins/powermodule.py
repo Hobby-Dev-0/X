@@ -1,12 +1,14 @@
-
 from . import *
 
-async def restart(rstart):
+async def restart(event):
     await eor(
-        rstart,
+        event,
         f"✅ **Restarted UserBot X** \n**Type** `{HANDLER}ping` **after 1 minute to check if I am working !**",
     )
-    await print("restarted X")
+    try:
+        os.system(print("Restarted - X!"))
+    except:
+        await os.system("print({rest}")
     await bash("pkill python3 && python3 -m userbot")
 
 
@@ -15,4 +17,4 @@ async def re(user):
     if user.fwd_from:
         return
     event = await eor(user, "Restarting UserBot X ...")
-    await restart(rstart)
+    await restart(event)
