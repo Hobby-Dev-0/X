@@ -12,7 +12,7 @@ async def restart(event):
         rest = "Restarted - X"
         x = None
         if x is not None:
-            os.system(f"print({rest})"
+            os.system(f"print({rest})")
     await bash("pkill python3 && python3 -m userbot")
 
 
