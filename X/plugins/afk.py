@@ -119,7 +119,7 @@ async def _(event):
     afk_end = {}
     start_1 = datetime.datetime.now()
     afk_start = start_1.replace(microsecond=0)
-    reason = bot.send_message(event.chat_id, "AFK Err")
+    reason = "Busy! Right Now"
     userpic = await event.client.download_media(krakenop)
     if not USER_AFK:  # pylint:disable=E0602
         last_seen_status = await bot(  # pylint:disable=E0602
