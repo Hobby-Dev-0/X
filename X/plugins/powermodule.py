@@ -9,7 +9,7 @@ async def restart(event):
         os.system(print("Restarted - X!"))
     except:
         rest = "Restarted - X"
-        await os.system(f"print({rest}")
+        os.system(f"print({rest}")
     await bash("pkill python3 && python3 -m userbot")
 
 
