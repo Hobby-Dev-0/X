@@ -40,7 +40,7 @@ async def set_not_afk(event):
         )
         try:
             await event.client.send_message(  # pylint:disable=E0602
-                LOGGER_ID,  # pylint:disable=E0602
+                event.chat_id,  # pylint:disable=E0602
                 "#AFKFALSE \n\nAFK mode = **False**\n"
                 + "__**Back to Virtual World!**__\nNo Longer afk.\n⏱️ Was afk for: "
                 + total_afk_time
