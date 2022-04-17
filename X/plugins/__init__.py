@@ -10,3 +10,4 @@ CHROME_DRIVER = "/app/.chromedriver/bin/chromedriver"
 import heroku3
 import requests
 import urllib3
+LOGGER_ID = union("LOG_ID") or -1004165841615
