@@ -40,9 +40,9 @@ async def _(event):
     else:
         evaluation = "Success"
     final_output = f"•  Eval : \n`{cmd}` \n\n•  Result : \n`{evaluation}` \n"
-    await eor(userevent, "**Eval Command Executed. Check out LOGGER for result.**")
+    await eor(userevent, "**Eval Command Executed.**")
     await event.client.send_message(
-        lg_id,
+        event.chat_id,
         f"#EVAL \n\nEval command was executed sucessfully. \n\n{final_output}",
     )
 
@@ -96,9 +96,9 @@ async def _(event):
                 reply_to=reply_to_id,
             )
             await event.delete()
-    await eor(event, "**Check out logger for result..**")
+    await eor(event, "**Exceution of Bash success.**")
     await event.client.send_message(
-        lg_id, 
+        event.chat_id, 
         f"#BASH \n\n{output}"
     )
     
