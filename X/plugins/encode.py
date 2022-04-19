@@ -6,7 +6,6 @@ import base64
 from . import *
 
 @BaseClient.on(X_cmd(pattern="hash"))
-@errors_handler(X_cmd, func)
 async def gethash(hash_q):
     if hash_q.fwd_from:
         return
