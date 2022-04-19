@@ -6,7 +6,7 @@ import base64
 from . import *
 
 @BaseClient.on(X_cmd(pattern="hash"))
-@errors_handler
+@errors_handler(X_cmd)
 async def gethash(hash_q):
     if hash_q.fwd_from:
         return
@@ -54,7 +54,7 @@ async def gethash(hash_q):
 
 
 @BaseClient.on(X_cmd(pattern="b64 (en|de)"))
-@errors_handler()
+@errors_handler(X_cmd)
 async def endecrypt(query):
     if query.fwd_from:
         return
