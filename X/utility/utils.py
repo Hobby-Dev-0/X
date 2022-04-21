@@ -16,11 +16,60 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from .. import *
+from ..main import *
+from ..main.apivar import *
 from .progress import CancelProcess
 
 
 
+
+# delete timeout
+async def delete(event, text, time=None, parse_mode=None, link_preview=None):
+    parse_mode = parse_mode or "md"
+    link_preview = link_preview or False
+    time = time or 10
+    if event.sender_id in SUDO_CLIENT:
+        reply_to = await event.get_reply_message()
+        event = (
+            await reply_to.reply(text, link_preview=link_preview, parse_mode=parse_mode)
+            if reply_to
+            else await event.reply(
+                text, link_preview=link_preview, parse_mode=parse_mode
+            )
+        )
+    else:
+        event = await event.edit(
+            text, link_preview=link_preview, parse_mode=parse_mode
+        )
+    await asyncio.sleep(time)
+    return await event.delete()
+
+
+
+
+
+async def edit_delete(event, text, time=None, parse_mode=None, link_preview=None):
+    sudo_users = _sudousers_list()
+    parse_mode = parse_mode or "md"
+    link_preview = link_preview or False
+    time = time or 5
+    if event.sender_id in SUDO_CLIENT:
+        reply_to = await event.get_reply_message()
+        catevent = (
+            await reply_to.reply(text, link_preview=link_preview, parse_mode=parse_mode)
+            if reply_to
+            else await event.reply(
+                text, link_preview=link_preview, parse_mode=parse_mode
+            )
+        )
+    else:
+        event = await event.edit(
+            text, link_preview=link_preview, parse_mode=parse_mode
+        )
+    await asyncio.sleep(time)
+    return await event.delete()
+
+eod = edit_delete
 
 def load_module(shortname):
     if shortname.startswith("__"):
@@ -407,6 +456,54 @@ def time_formatter(milliseconds: int) -> str:
         + ((str(seconds) + " second(s), ") if seconds else "")
         + ((str(milliseconds) + " millisecond(s), ") if milliseconds else "")
     )
+
+# delete timeout
+async def delete(event, text, time=None, parse_mode=None, link_preview=None):
+    parse_mode = parse_mode or "md"
+    link_preview = link_preview or False
+    time = time or 10
+    if event.sender_id in Config.SUDO_USERS:
+        reply_to = await event.get_reply_message()
+        event = (
+            await reply_to.reply(text, link_preview=link_preview, parse_mode=parse_mode)
+            if reply_to
+            else await event.reply(
+                text, link_preview=link_preview, parse_mode=parse_mode
+            )
+        )
+    else:
+        event = await event.edit(
+            text, link_preview=link_preview, parse_mode=parse_mode
+        )
+    await asyncio.sleep(time)
+    return await event.delete()
+
+
+
+
+
+async def edit_delete(event, text, time=None, parse_mode=None, link_preview=None):
+    sudo_users = _sudousers_list()
+    parse_mode = parse_mode or "md"
+    link_preview = link_preview or False
+    time = time or 5
+    if event.sender_id in sudo_users:
+        reply_to = await event.get_reply_message()
+        catevent = (
+            await reply_to.reply(text, link_preview=link_preview, parse_mode=parse_mode)
+            if reply_to
+            else await event.reply(
+                text, link_preview=link_preview, parse_mode=parse_mode
+            )
+        )
+    else:
+        event = await event.edit(
+            text, link_preview=link_preview, parse_mode=parse_mode
+        )
+    await asyncio.sleep(time)
+    return await event.delete()
+
+eod = edit_delete
     return tmp[:-2]
 
 
