@@ -4,7 +4,7 @@ import sys
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 import os
 from telethon import TelegramClient
-from ..utility.utils import load_utils
+from ..utility.utils import load_module as load_utils
 from .start_utility import LOAD_PLUG, BOTLOG_CHATID, LOGS
 from pathlib import Path
 import asyncio
