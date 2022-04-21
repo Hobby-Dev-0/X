@@ -16,8 +16,7 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-#from .. import *
-from ..main.apivar import *
+from .. import *
 from .progress import CancelProcess
 
 
