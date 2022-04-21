@@ -500,8 +500,6 @@ async def edit_delete(event, text, time=None, parse_mode=None, link_preview=None
         )
     await asyncio.sleep(time)
     return await event.delete()
-
-eod = edit_delete
     return tmp[:-2]
 
 
