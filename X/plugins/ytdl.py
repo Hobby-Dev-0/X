@@ -18,7 +18,7 @@ from . import *
 async def download_video(v_url):
     if v_url.fwd_from:
         return
-    url = v_url.pattern_match.group(2)
+    url = v_url.chat_id
     type = v_url.pattern_match.group(1).lower()
 
     event = await eor(v_url, "`Preparing to download...`")
