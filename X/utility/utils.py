@@ -20,7 +20,7 @@ from .. import *
 from .progress import CancelProcess
 
 
-
+"""
 
 # delete timeout
 async def delete(event, text, time=None, parse_mode=None, link_preview=None):
@@ -69,7 +69,7 @@ async def edit_delete(event, text, time=None, parse_mode=None, link_preview=None
     return await event.delete()
 
 eod = edit_delete
-
+"""
 def load_module(shortname):
     if shortname.startswith("__"):
         pass
