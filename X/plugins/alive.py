@@ -4,6 +4,7 @@ import os
 from . import *
 
 ver = "0.1"
+X = os.system("python --version") or "3.10.2"
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 PM_IMG = (
@@ -12,8 +13,8 @@ PM_IMG = (
 )
 pm_caption = "➥ **X:** `ONLINE`\n\n"
 pm_caption += "➥ **ѕуѕтємѕ ѕтαтѕ**\n"
-pm_caption += "➥ **тєℓєтнση νєяѕιση:** `1.23.0` \n"
-pm_caption += "➥ **ρутнση:** `3.9.6` \n"
+pm_caption += "➥ **тєℓєтнση νєяѕιση:** `1.24.0` \n"
+pm_caption += f"➥ **ρутнση:** `{X}` \n"
 pm_caption += "➥ **∂αтαвαѕє ѕтαтυѕ:**  `Functional`\n"
 pm_caption += "➥ **¢υяяєηт вяαη¢н** : `master`\n"
 pm_caption += f"➥ **νєяѕιση** : `{ver}`\n"
