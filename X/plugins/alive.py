@@ -23,7 +23,6 @@ pm_caption += f"➥ **ℓι¢єηѕє** : [𝘎𝘕𝘜 𝘈𝘧𝘧𝘦𝘳𝘰
 pm_caption += "➥ **¢σρуяιgнт** : By [Aman Pandey](https://github.com/Hobby-Dev-0/)\n"
 
 
-# only Owner Can Use it
 @BaseClient.on(X_cmd(pattern="alive$"))
 async def _(event):
     await event.get_chat()
